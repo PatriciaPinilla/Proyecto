@@ -9,13 +9,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.winchester.proyecto.MainActivity">
 
-    <ExpandableListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listaparque"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="visible"
-        tools:listitem="@android:layout/simple_list_item_1" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:entries="@array/parques"
+        android:fastScrollEnabled="false" />
 </RelativeLayout>
