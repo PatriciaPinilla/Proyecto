@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,9 +17,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        registrarEventos();
+       // registrarEventos();
     }
-    private void registrarEventos (){
+
+public void SIGUIENTE (View Next){
+    Intent intent = new Intent(this, InfoParque.class);
+    intent.putExtra("NOMBRE PARQUE", "RESERVA CHICAQUE");
+    startActivity(intent);
+}
+    /*private void registrarEventos (){
         ListView parques = (ListView) findViewById(R.id.NombreParque);
 
         parques.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -30,20 +37,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Haz hecho click en " + itemSeleccionado, Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-        if (id == R.id.NombreParque){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    }*/
 }
